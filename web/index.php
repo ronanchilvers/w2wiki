@@ -13,18 +13,18 @@
  */
  
 // Install PSR-4-compatible class autoloader
-spl_autoload_register(function($class){
-	require str_replace('\\', DIRECTORY_SEPARATOR, ltrim($class, '\\')).'.php';
-});
+// spl_autoload_register(function($class){
+// 	require __DIR__ . "/../" . str_replace('\\', DIRECTORY_SEPARATOR, ltrim($class, '\\')).'.php';
+// });
 
+include(__DIR__ . "/../vendor/autoload.php");
 
 // Get Markdown class
 use Michelf\MarkdownExtra;
 
-
 // User configurable options:
 
-include_once "config.php";
+include_once __DIR__ . "/../config.php";
 
 ini_set('session.gc_maxlifetime', W2_SESSION_LIFETIME);
 
@@ -530,5 +530,3 @@ print "</div>\n";
 
 print "</body>\n";
 print "</html>\n";
-
-?>

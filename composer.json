@@ -1,0 +1,13 @@
+{
+    "name": "ronanchilvers/w2wiki",
+    "type": "project",
+    "require": {
+        "michelf/php-markdown": "^1.9"
+    },
+    "authors": [
+        {
+            "name": "Ronan Chilvers",
+            "email": "ronan@thelittledot.com"
+        }
+    ]
+}
