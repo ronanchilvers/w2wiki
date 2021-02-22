@@ -2,7 +2,8 @@
     "name": "ronanchilvers/w2wiki",
     "type": "project",
     "require": {
-        "michelf/php-markdown": "^1.9"
+        "michelf/php-markdown": "^1.9",
+        "ronanchilvers/utility": "^1.9"
     },
     "authors": [
         {

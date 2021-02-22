@@ -29,6 +29,11 @@ define('BASE_PATH', __DIR__);
 
 define('PAGES_PATH', BASE_PATH . '/pages');
 
+// WEB_PATH
+//
+// The path to the web root
+define('WEB_PATH', BASE_PATH . '/web');
+
 // BASE_URI
 //
 // The base URI for this W2 installation.  You only need to change this if we guess wrong.
@@ -54,7 +59,7 @@ define('VIEW', '');
 // The name of the page to show as the "Home" page.
 // Value is a string, the title of a page (case-sensitive!)
 
-define('DEFAULT_PAGE', 'Home');
+define('DEFAULT_PAGE', 'home');
 
 // CSS_FILE
 //

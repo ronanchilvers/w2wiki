@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a1040a18ddb33f075e58159069eaebe8",
+    "content-hash": "03f43ec6eb6d9d73bca8bc1ab0e5456f",
     "packages": [
         {
             "name": "michelf/php-markdown",
@@ -54,6 +54,46 @@
                 "markdown"
             ],
             "time": "2019-12-02T02:32:27+00:00"
+        },
+        {
+            "name": "ronanchilvers/utility",
+            "version": "1.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ronanchilvers/utility.git",
+                "reference": "fc6b425463d72243b5c720aacefd578d52303389"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ronanchilvers/utility/zipball/fc6b425463d72243b5c720aacefd578d52303389",
+                "reference": "fc6b425463d72243b5c720aacefd578d52303389",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.8"
+            },
+            "require-dev": {
+                "jakub-onderka/php-parallel-lint": "^1.0",
+                "phpunit/phpunit": "^6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Ronanchilvers\\Utility\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ronan Chilvers",
+                    "email": "ronan@thelittledot.com"
+                }
+            ],
+            "description": "Handy utility classes for PHP",
+            "time": "2019-11-04T13:58:04+00:00"
         }
     ],
     "packages-dev": [],
