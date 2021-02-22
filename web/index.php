@@ -178,7 +178,7 @@ function sanitizeFilename($inFileName)
 {
 	$filename = str_replace(array('..', '~', '/', '\\', ':'), '-', $inFileName);
 
-    return Str::snake($filename);
+    return Str::snake($filename, ['.']);
 }
 
 function destroy_session()
@@ -301,11 +301,11 @@ else if ( $action == "upload" )
 		$html = "<form id=\"upload\" method=\"post\" action=\"" . SELF . "\" enctype=\"multipart/form-data\">\n";
 		$html .= "<input type=\"hidden\" name=\"action\" value=\"uploaded\" />";
 		$html .= "<div class=\"field\">";
-        $html .= "<div class=\"file has-name\">
+        $html .= "<div class=\"file has-name is-fullwidth\">
   <label class=\"file-label\">
     <input class=\"file-input\" type=\"file\" name=\"userfile\">
     <span class=\"file-cta\">
-      <span class=\"file-icon\"><i class=\"fas fa-upload\"></i></span>
+      <!-- <span class=\"file-icon\"><i class=\"fas fa-upload\"></i></span> -->
       <span class=\"file-label\">Choose a file</span>
     </span>
     <span class=\"file-name\">&hellip;</span>
@@ -328,7 +328,6 @@ else if ( $action == "uploaded" )
 		$fileType = $_FILES['userfile']['type'];
 		preg_match('/\.([^.]+)$/', $dstName, $matches);
 		$fileExt = isset($matches[1]) ? $matches[1] : null;
-		
 		if (in_array($fileType, explode(',', VALID_UPLOAD_TYPES)) &&
 			in_array($fileExt, explode(',', VALID_UPLOAD_EXTS)))
 		{
@@ -531,6 +530,6 @@ print "$html\n";
 print "</div>\n";
 print "</div>\n";
 print "</section>\n";
-// print "<script src=\"app.js\"></script>";
+print "<script src=\"app.js\"></script>";
 print "</body>\n";
 print "</html>\n";
