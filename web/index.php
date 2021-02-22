@@ -13,14 +13,14 @@
  */
  
 // Install PSR-4-compatible class autoloader
-spl_autoload_register(function($class){
-	require __DIR__ . "/../" . str_replace('\\', DIRECTORY_SEPARATOR, ltrim($class, '\\')).'.php';
-});
+// spl_autoload_register(function($class){
+// 	require __DIR__ . "/../" . str_replace('\\', DIRECTORY_SEPARATOR, ltrim($class, '\\')).'.php';
+// });
 
+include(__DIR__ . "/../vendor/autoload.php");
 
 // Get Markdown class
 use Michelf\MarkdownExtra;
-
 
 // User configurable options:
 
